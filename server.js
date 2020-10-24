@@ -1,23 +1,31 @@
+//Dependencies
 const express = require("express");
 const mongoose = require("mongoose");
+const logger = require("morgan");
 
+//Defining PORT
 const PORT = process.env.PORT || 3000;
 
 const app = express();
+
+app.use(logger("dev"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGOD_URI || "mongodb://localhost/budget", {
+//MongoDB connection
+mongoose.connect(process.env.MONGOD_URI || "mongodb://localhost/workout", {
     useNewUrlParser: true,
-    useFindAndModify: false
+    useUnifiedTopology: true
 });
 
 //Routing
-app.use(require("./routes/api.js"));
+//app.use(require("./routes/api.js"));
+require("./routes/html.js")(app);
 
+//Listener
 app.listen(PORT, () => {
     console.log(`App running on PORT ${PORT}!`);
 });
