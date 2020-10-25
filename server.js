@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //MongoDB connection
-var MONGOD_URI = process.env.MONGOD_URI ||  "mongodb://localhost/workout";
+var MONGODB_URI = process.env.MONGOD_URI ||  "mongodb://localhost/workout";
 const options = {
     useNewUrlParser: true,
     useCreateIndex: true,
