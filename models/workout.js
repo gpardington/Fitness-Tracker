@@ -26,14 +26,14 @@ const workoutSchema = new Schema({
         reps: Number,
         sets: Number,
         distance: Number
-        }
-    ]
+        },
+    ],
 },
 {
     //Data calculated when requested
     toJSON: {
         virtuals: true,
-    }
+    },
 });
 
 workoutSchema.virtual("totalDuration").get(function () {

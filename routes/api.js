@@ -6,37 +6,37 @@ router.get("/api/workouts", (req, res) => {
         .then((dbWorkout) => {
             res.json(dbWorkout);
         })
-        .catch(err => {
+        .catch((err) => {
             res.status(400).json(err);
         });
 });
 
-router.post("/api/workouts", ({ body }, res) => {
-    db.Workout.create(body)
-        .then(dbWorkout => {
+router.post("/api/workouts", (req, res) => {
+    db.Workout.create(req.body)
+        .then((dbWorkout) => {
             res.json(dbWorkout);
         })
-        .catch(err => {
+        .catch((err) => {
             res.status(400).json(err);
         });
 });
 
 router.put("/api/workouts/:id", function ({ body, params }, res) {
     db.Workout.updateOne({ _id: params.id }, { $push: { exercises: body } })
-        .then(dbWorkout => {
+        .then((dbWorkout) => {
             res.json(dbWorkout);
         })
-        .catch(err => {
+        .catch((err) => {
             res.status(400).json(err);
         });
 });
 
-router.get("api/workouts/range", (req, res) => {
+router.get("/api/workouts/range", (req, res) => {
     db.Workout.find({})
         .then((range) => {
             res.json(range);
         })
-        .catch(err => {
+        .catch((err) => {
             res.status(400).json(err);
         });
 });
