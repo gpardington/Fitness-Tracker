@@ -10,14 +10,15 @@ html,
 body,
 .wrapper {
   height: 100%;
+  overflow: hidden;
 }
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: lightgray;
 }
 
 nav {
-  background-color: #5793fd;
   color: #ffffff;
   height: 80px;
   padding: 10px;
@@ -100,14 +101,18 @@ input {
 }
 
 .wrapper {
-  background-color: #f2f8ff;
+  background-color:lightgray;
+  background-image: url("/../images/arnold.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
   padding-bottom: 100px;
 }
 
 .card.m-auto,
 .m-auto {
   margin: 0 auto;
-  width: 500px;
+  width: 700px;
 }
 
 form .workout-type,
@@ -138,12 +143,12 @@ form::after {
 }
 
 .exercise .ui.card {
-  width: 400px;
-  max-width: 600px;
+  width: 700px;
+  max-width: 800px;
 }
 
 .exercise .buttons {
-  margin-top: 20px;
+  margin-top: 60px;
   display: flex;
 }
 
@@ -160,6 +165,7 @@ button {
   border: 1px solid #aaa;
   padding: 10px;
   background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  font-family: 'Black Ops One', cursive !important;
 }
 
 #toast {
@@ -168,7 +174,6 @@ button {
   font-size: 13px;
   line-height: 19.5px;
   margin: 0px 0px 16px;
-  padding: 12px 59.5px 12px 20px;
   text-align: left;
   width: 300px;
   min-height: 80px;
@@ -214,17 +219,6 @@ form::after {
   display: none;
 }
 
-button {
-  display: block;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #aaa;
-  padding: 10px;
-  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
-}
-
 #toast {
   border-radius: 4px;
   border-width: 1px;
@@ -275,17 +269,6 @@ form::after {
   display: none;
 }
 
-button {
-  display: block;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #aaa;
-  padding: 10px;
-  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
-}
-
 #toast {
   border-radius: 4px;
   border-width: 1px;
@@ -324,6 +307,7 @@ button {
   border: 1px solid #aaa;
   padding: 10px;
   background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  font-family: 'Black Ops One', cursive !important;
 }
 
 form > button {
@@ -371,10 +355,6 @@ form > button {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
-/* .workout .card {
-  width: 350px;
-} */
 
 .prev-workout button {
   margin: 10px;
@@ -438,4 +418,59 @@ form > button {
     opacity: 0;
     right: -320px;
   }
+}
+
+/* Additional CSS */
+
+.navbar {
+  background-color: gold;
+}
+
+.navbar-brand {
+  font-family: 'Black Ops One', cursive;
+  font-size: 4rem !important;
+  color: slategrey !important;
+  text-shadow: 2px 2px 2px black;
+}
+
+#dashboard-header {
+  font-family: 'Black Ops One', cursive;
+  font-size: 4rem !important;
+  color: gold !important;
+  text-shadow: 2px 2px 2px black;
+}
+
+.navbar-nav {
+  color: slategrey !important;
+  font-size: 2rem !important;
+  font-family: 'Black Ops One', cursive;
+  text-shadow: 1px 1px 1px black;
+}
+
+.card {
+  min-width: 400px !important;
+  margin-top: 150px !important;
+}
+
+#last-workout-header {
+  font-family: 'Black Ops One', cursive;
+  color: gold;
+  text-shadow: 2px 2px 2px black;
+  font-size: 2.5rem;
+}
+
+#add-exercise-header {
+  font-family: 'Black Ops One', cursive;
+  color: gold;
+  text-shadow: 2px 2px 2px black;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#continue-btn {
+  font-family: 'Black Ops One', cursive !important;
+}
+
+#new-btn {
+  font-family: 'Black Ops One', cursive !important;
 }
