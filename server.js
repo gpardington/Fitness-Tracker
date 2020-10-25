@@ -18,14 +18,17 @@ app.use(express.static("public"));
 
 //MongoDB connection
 var MONGOD_URI = process.env.MONGOD_URI ||  "mongodb://localhost/workout";
-mongoose.connect(MONGOD_URI, {
+const options = {
     useNewUrlParser: true,
+    useCreateIndex: true,
     useFindAndModify: false,
-});
+  };
+  
+  mongoose.connect(MONGODB_URI,options)
 
 //Routing
-require("./routes/html.js")(app);
-require("./routes/api.js")(app);
+app.use(require("./routes/api.js"));
+app.use(require("./routes/html.js"));
 
 //Listener
 app.listen(PORT, () => {

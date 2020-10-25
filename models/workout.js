@@ -25,15 +25,15 @@ const workoutSchema = new Schema({
         weight: Number,
         reps: Number,
         sets: Number,
-        distance: Number
+        distance: Number,
         },
     ],
 },
 {
     //Data calculated when requested
         toJSON: {
-            virtuals: true
-        }
+            virtuals: true,
+        },
     }
 );
 
