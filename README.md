@@ -7,7 +7,7 @@ A full-stack application that allows the user to create, view, and track their d
 - [User Story](#user-story)
 - [Development](#development)
 - [Installation](#installation)
-- [Dependencies](#dependencies)
+- [Technologies](#technologies)
 - [Demo](#demo)
 - [Contributors](#contributors)
 - [Questions](#questions)
@@ -35,7 +35,7 @@ After I created the server.js file and was able to connect to the server on port
 
 To run this application locally, clone this repo into your local machine and run 'npm i' in the root file of the folder. This will install all of the neccesary dependencies. After everything is installed, type 'npm start' in your terminal to begin hosting locally. In your internet browser, type in 'http://localhost:3000/' into the url address bar to pull up the application. 
 
-## Dependencies:
+## Technologies:
 - HTML
 - CSS
 - Bootstrap
